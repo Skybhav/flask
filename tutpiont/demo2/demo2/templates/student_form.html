@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Form</title>
+    </head>
+    <body>
+        <form method="post" action="{{ url_for('student_result') }}">
+            
+            <label>Enter Name </label>
+            <input name="name" type="text" >
+            <br><br>
+
+            <label>Enter Physics Mark </label>
+            <input name="physics_mark" type="text" >
+            <br><br>
+
+            <label>Enter Chemistry Mark </label>
+            <input name="chemistry_mark" type="text" >
+            <br><br>
+
+            <label>Enter Maths Mark </label>
+            <input name="maths_mark" type="text" >
+            <br><br>
+
+            <input type="submit" name="submit" value="submit">
+
+        </form>
+    </body>
+</html>

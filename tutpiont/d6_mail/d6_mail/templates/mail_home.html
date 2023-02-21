@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Flask Email
+        </title>
+    </head>
+    <body>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+
+            {% for msg in messages %}
+            <h2>{{msg}}</h2>
+            {% endfor %}
+
+            {% endif %}
+        {% endwith %}
+
+        <form method="post" action="/send_email" enctype="multipart/form-data">
+
+            <table>
+                <tr>
+                    <th>Send mail to : </th>
+                    <td><input type="email" name="mail" ></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" name="send" value="send" >
+                    </th>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

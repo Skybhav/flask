@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student marks</title>
+    </head>
+
+    <body>
+        <h2>Result : </h2>
+
+        <hr>
+
+        <table border="1">
+            {% for key, value in context.result.items() %}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>
